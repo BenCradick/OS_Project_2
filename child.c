@@ -40,10 +40,7 @@ int main(int argc, char **argv){
     endSec = *sec + temp;
     endNano = *nano - (temp * billion);
 
-    while(*sec <= endSec && *nano <= endNano){
-//        sec = (long*)shmat(shmid, NULL, 0);
-//        nano = (long*)shmat(shmid2, NULL, 0);
-    }
+    while(*sec <= endSec && *nano <= endNano){} //sec and nano are shared memory whose values will update automatically.
 
     fprintf(stdout, "pid: %d secounds: %ld nanoseconds: %ld %s\n", getpid(), *sec, *nano, "Child process is terminating.");
     shmdt(sec);
