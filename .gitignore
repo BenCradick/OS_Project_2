@@ -235,3 +235,4 @@ Temporary Items
 
 .idea/*
 CMakeLists.txt
+*.txt
